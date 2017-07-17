@@ -1,0 +1,103 @@
+body {
+/*  background-image: url("../img/background.png");*/
+/*  background-size: cover;
+  background-repeat: no-repeat;*/*/
+  margin: 0;
+  padding: 0;
+}
+
+#mypage .page__background {
+  background-color: #ffffff;
+  /*background-image: url("../img/604d52217cc4c88d38103f55de237c64.png");*/
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+}
+
+img.tengah {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tengah {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logo_login {
+  margin-bottom: 5px;
+  max-height: 180px; 
+  margin-bottom: 45px;
+}
+
+.form-row {
+  margin: 5px;
+}
+
+.width-full {
+  width: 100%;
+}
+
+.width-half1 {
+  width: 80%;
+}
+
+.Input_captcha {
+  margin-top: 20px; margin-left: 20px; text-align: center; height: 25px; width: 70%
+}
+
+.style input[type="text"] {
+  padding: 20px;
+  border: solid 1px gainsboro;
+}
+.lucent {
+  opacity: 0.4;
+}
+
+.note {
+  margin: 12px 8px;
+  font-size: 13px;
+}
+
+.vspc {
+  margin-top: 20px;
+}
+
+.formarea {
+  width: 90%;
+  margin: 50px auto 0px auto;
+}
+
+/*APP*/
+.list-item-container {
+  line-height: 1;
+  padding: 15px 0px 15px 15px;
+}
+
+.thumbnail {
+  width: 80px;
+  height: 80px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+}
+
+.name {
+  font-weight: 500;
+  line-height: 16px;
+  font-size: 15px;
+  margin-bottom: 6px;
+}
+
+.location {
+  font-size: 14px;
+  opacity: 0.4;
+  margin-bottom: 6px;
+}
+
+.desc {
+  line-height: 1.2;
+  font-size: 13px;
+}
