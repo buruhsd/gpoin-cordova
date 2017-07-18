@@ -1,7 +1,8 @@
 app.controller('MainController', function($scope, $http){
 
 	$scope.username="";
-	$scope.password="";
+	$scope.pass="";
+
 
 		var a = Math.floor(100000 + Math.random() * 900000);   
 		    a = String(a);
@@ -33,24 +34,27 @@ app.controller('MainController', function($scope, $http){
 
 		$scope.login=function(index){
 
+			$scope.password=md5($scope.pass);
 			console.log($scope.captcha);
 			console.log($scope.username);
 			console.log($scope.password);
+			console.log($scope.pass);
 
-			$http.post("http://112.78.37.121/apig/gmember_id_bisnis/controller_membernya/login",{'username':$scope.username, 'password':$scope.password, 'type':'1','imei':'0'})
-			.then(function(response) {
-		        $scope.content = response.data;  
+			$http.post("http://112.78.37.121/apig/gmember_phonegap/controller_membernya/login",{'username':$scope.username, 'pass':$scope.pass, 'password':$scope.password, 'type':'1','imei':'0'})
+		    .then(function successCallback(response) {
+			    $scope.content = response.data;
+			    if ($scope.content != false) {
+			    	console.log("hahahha")
+			    }
+			    	console.log($scope.content);	
+			    
+		        
+			  }, function errorCallback(response) {
+			    // called asynchronously if an error occurs
+			    // or server returns response with an error status.
+			  });
+		    }
+		
 
-		        console.log($scope.content);    
-		    })
-		}
-
-		// $scope.insertdata=function(){
-		// 	$http.post("input.php",{'id':$scope.id, 'nama':$scope.nama, 'alamat':$scope.alamat,'jenis':$scope.jenis})
-		// 	.success(function(){
-		// 	$scope.msg="Data Berhasil Disimpan";
-		// 	$scope.displayStud();
-		// 	})
-		// }
 		
 });

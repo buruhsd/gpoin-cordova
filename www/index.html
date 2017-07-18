@@ -37,7 +37,11 @@
           </ons-select>
         </div>
         <div class="form-row">
-          <input type="Password" class="text-input--underbar width-full" placeholder="Password" value="" ng-model="password">
+          <input type="Password" class="text-input--underbar width-full" placeholder="Password" id="input" value="" ng-model="pass">
+          <!-- <button type="submit" id="calculate">Calculate</button>
+          <button type="reset" id="reset">Reset</button>
+          <h2>Result</h2> -->
+          <input type="hidden" class="text-input--underbar width-full" placeholder="Password" id="result" value="" >
         </div>
         <!-- akhir data input -->
         <!-- captcha -->
@@ -59,7 +63,7 @@
         <!-- akhir captcha -->
         <!-- button -->
         <div class="vspc form-row"> 
-          <ons-button ng-click="login()" modifier="large--cta" style="margin: 0 auto; background-color: #D94B5E; color: #FFFFFF;">
+          <ons-button ng-click="login()" id="calculate" modifier="large--cta" style="margin: 0 auto; background-color: #D94B5E; color: #FFFFFF;">
             LOG IN
           </ons-button>
           <ons-row>
@@ -89,6 +93,8 @@
     <script src="js/app.js"></script>
     <script src="js/controllers/MainController.js"></script>
     <script src="js/directives/MyDirective.js"></script>
+    <script src="js/md5.js"></script>
+    <script src="js/demo/demo.js"></script>
 
     </div>
     </body>
