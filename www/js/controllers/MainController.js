@@ -2,6 +2,7 @@ app.controller('MainController', function($scope, $http){
 
 	$scope.username="";
 	$scope.pass="";
+	$scope.inputcaptcha="";
 
 
 		var a = Math.floor(100000 + Math.random() * 900000);   
@@ -40,20 +41,38 @@ app.controller('MainController', function($scope, $http){
 			console.log($scope.password);
 			console.log($scope.pass);
 
-			$http.post("http://112.78.37.121/apig/gmember_phonegap/controller_membernya/login",{'username':$scope.username, 'pass':$scope.pass, 'password':$scope.password, 'type':'1','imei':'0'})
-		    .then(function successCallback(response) {
-			    $scope.content = response.data;
-			    if ($scope.content != false) {
-			    	console.log("hahahha")
-			    }
-			    	console.log($scope.content);	
-			    
-		        
-			  }, function errorCallback(response) {
-			    // called asynchronously if an error occurs
-			    // or server returns response with an error status.
-			  });
-		    }
+			if ($scope.inputcaptcha != "" || $scope.username != "" || $scope.pass != "") {
+				if ($scope.inputcaptcha == $scope.captcha) {
+					$http.post("http://112.78.37.121/apig/gmember_phonegap/controller_membernya/login",{'username':$scope.username, 'pass':$scope.pass, 'password':$scope.password, 'type':'1','imei':'0'})
+				    .then(function successCallback(response) {
+					    console.log(response.data);
+
+						var json = JSON.stringify(response.data);
+
+						// console.log(json);
+					    if (json != "false") {
+					    	console.log(json);
+					    	window.location.href = 'app.html'+$scope.username;
+					    }else{
+					    	window.alert("hahahah");
+					    }
+					    
+				        
+					  }, function errorCallback(response) {
+					    // called asynchronously if an error occurs
+					    // or server returns response with an error status
+					    window.alert("cek koneksi");
+					  });
+				}else{
+					window.alert("captcha salah");	
+				}
+				
+			}else{
+
+				window.alert("harus diisi semua");
+			}
+			
+		}
 		
 
 		
