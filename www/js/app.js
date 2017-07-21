@@ -1,4 +1,4 @@
-var app=angular.module('FirstApp',[]);
+var app=angular.module('FirstApp',["ngRoute"]);
 
 app.filter('rupiah',	function(){
 	return	function	toRp(angka){
@@ -12,4 +12,21 @@ app.filter('rupiah',	function(){
 		}
 		return	'Rp. ' + rev2.split('').reverse().join('') + ',00';
 	}
+});
+
+// var app = angular.module("myApp", ["ngRoute"]);
+app.config(function($routeProvider) {
+    $routeProvider
+    .when("/", {
+        templateUrl : "index.html"
+    })
+    .when("/red", {
+        templateUrl : "app.html"
+    })
+    .when("/green", {
+        templateUrl : "green.htm"
+    })
+    .when("/blue", {
+        templateUrl : "blue.htm"
+    });
 });

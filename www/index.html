@@ -1,4 +1,4 @@
-<!doctype html>
+<!-- <!doctype html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -15,20 +15,20 @@
                 border: none;
             }
         </style>
-  </head>
-  <body ng-app="FirstApp">
+  </head> -->
+<!--   <body ng-app="FirstApp"> -->
   <div ng-controller="MainController">
 
-    <ons-page id='mypage' id="login.html">
+<!--     <ons-page id='mypage' id="login.html"> -->
       <div class="formarea">
         <!-- logo -->
         <div class="logo">
-          <img class="logo_login tengah" src="img/gpoin2u_logo.png"> 
+          <img class="logo_login tengah" src="img/gpoin2u_logo.png"> </img>
         </div>
         <!-- akhir logo -->
         <!-- data input -->
         <div class="form-row">
-          <input type="Username" class="text-input--underbar width-full" placeholder="Username" value="" ng-model="username">
+          <input type="Username" class="text-input--underbar width-full" placeholder="Username" value="" ng-model="username"></input>
         </div>
         <div class="form-row">
           <ons-select id="choose-sel" class="select-input--underbar width-full">
@@ -37,25 +37,25 @@
           </ons-select>
         </div>
         <div class="form-row">
-          <input type="Password" class="text-input--underbar width-full" placeholder="Password" id="input" value="" ng-model="pass">
+          <input type="Password" class="text-input--underbar width-full" placeholder="Password" id="input" value="" ng-model="pass"></input>
           <!-- <button type="submit" id="calculate">Calculate</button>
           <button type="reset" id="reset">Reset</button>
           <h2>Result</h2> -->
-          <input type="hidden" class="text-input--underbar width-full" placeholder="Password" id="result" value="" >
+          <input type="hidden" class="text-input--underbar width-full" placeholder="Password" id="result" value="" ></input>
         </div>
         <!-- akhir data input -->
         <!-- captcha -->
         <div class="form-row">
           <ons-row>
             <ons-col>
-              <input type="Input_captcha" class="text-input--underbar tengah Input_captcha" placeholder="Input" ng-model="inputcaptcha">
+              <input type="Input_captcha" class="text-input--underbar tengah Input_captcha" placeholder="Input" ng-model="inputcaptcha"></input>
             </ons-col>
             <ons-col>
               <div>
-                <input ng-model="captcha" type="text" class="text-input--underbar tengah" placeholder="Caphta" value="" style="text-align: center; width: 40%;" disabled>
+                <input  disabled="disabled" ng-model="captcha" type="text" class="text-input--underbar tengah" placeholder="Caphta" value="" style="text-align: center; width: 40%;" ></input>
               </div>
               <div>
-                <input type="image" name="" class="tengah button" src="img/Arrow-reload-icon.png" style="margin-top: 8px; height:30px;" ng-click="log()">
+                <input type="image" name="" class="tengah button" src="img/Arrow-reload-icon.png" style="margin-top: 8px; height:30px;" ng-click="log()"></input>
               </div>
             </ons-col>
           </ons-row>
@@ -89,15 +89,17 @@
         <!-- akhir button -->
       </div>
 
-    </ons-page>
-    <script src="js/angular/angular.js"></script>
+    <!-- </ons-page> -->
+<!--     <script src="js/angular/angular.js"></script>
     <script src="js/app.js"></script>
     <script src="js/controllers/MainController.js"></script>
     <script src="js/directives/MyDirective.js"></script>
     <script src="js/md5.js"></script>
-    <script src="js/demo/demo.js"></script>
+    <script src="js/demo/demo.js"></script>    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script> -->
+
 
     </div>
-    </body>
-
-</html>
+<!--     </body> -->
+<!-- 
+</html> -->
