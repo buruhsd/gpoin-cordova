@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/onsenui.css"/>
+    <link rel="stylesheet" href="css/onsen-css-components.css"/>
+    <link rel="stylesheet" href="css/MyStyle.css"/>
+    <script src="js/onsenui.js"></script>
+    <script src="js/MyScript.js"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
+  </head>
+  <body>
+<!--     <ons-page id='mypage' id="App.html"> -->
+
+<!-- index -->
+<ons-splitter>
+  <ons-splitter-content id="content" page="Voucher_Online.html"></ons-splitter-content>
+</ons-splitter>
+<!-- akhir index -->
+
+<!-- Voucher_Online -->
+<ons-template id="Voucher_Online.html">
+  <ons-page>
+    
+    <!-- toolbar -->
+    <ons-toolbar style="background-color: white;">
+      <div class="left" style="margin-left: 5px; color: #FFFFFF;">
+        <img src="img/back_button.png" alt="" style="height: 40px; padding-top: 8px; padding-left: 10px;">
+      </div>
+      <div class="center" style="color: #FFFFFF;">
+        <img class="tengah" src="img/gpoin2u_logo.png" alt="" style="height: 45px; padding-top: 5px;" onclick="location.href='App.html';">
+      </div>
+      <div class="right">
+        <img src="img/JVLOGO.png" alt="" style="height: 50px; padding-top: 2px; padding-right: 10px;">
+      </div>
+    </ons-toolbar>
+    <!-- akhir toolbar -->
+
+    <!-- content Voucher_Online -->
+    <div class="" style="margin-left: 10px;">
+      <b><p>Voucher</p></b>
+    </div>
+    <!-- profile -->
+    <ons-list>
+      <ons-row class ="profile">
+        <ons-col style="width: 10%; ">
+          <img src="img/drawable-hdpi/ps.png" style="height: 60px; margin-top: 20px; margin-left: 20px;">
+        </ons-col>
+        <ons-col style="width: 70%; margin-top: 20px; margin-left: -80px">
+          <div class="name">
+            <b style="font-size: 20px">jv-io</b>
+          </div>
+          <div class="name">
+            <b style="font-size: 18px">ii</b>
+          </div>
+          <div class="name" style="font-size: 16px;">
+            <b style="color: #D94B5E;">164.30217733 Poin</b>
+          </div>              
+        </ons-col>
+      </ons-row>
+    </ons-list>
+    <!-- akhir profile -->
+
+    <!-- sub menu -->
+    <ons-list class="formarea">
+
+      <div class="form-row">
+        <ons-select id="choose-sel" class="select-input--underbar width-full">
+          <option value="Indomaret">Indomaret</option>
+          <option value=""></option>
+        </ons-select>
+      </div>
+
+      <div class="">
+        <p style="color: #D94B5E; font-size: 12px;">*Voucher Belanja Indomaret</p>
+      </div>
+
+      <div class="form-row">
+        <ons-select id="choose-sel" class="select-input--underbar width-full">
+          <option value="Indomaret_500_000 ">Indomaret 500.000 </option>
+          <option value=""></option>
+        </ons-select>
+      </div>
+
+      <div class="form-row">
+        <input type="Username" class="text-input--underbar width-full" placeholder="Harga, IDR 55.000 = 3.66666667 Poin" value="">
+      </div>
+
+      <div class="form-row">
+        <input type="Username" class="text-input--underbar width-full" placeholder="Trx Password" value="">
+      </div>
+
+      <ons-button modifier="large--cta" style="margin-top: 10px; /*margin: 0 auto;*/ background-color: #D94B5E; color: #FFFFFF;">
+        BUY
+      </ons-button>
+
+    </ons-list>
+    <!-- akhir sub menu -->
+    <!-- akhir content Voucher_Online -->
+  </ons-page>
+</ons-template>
+<!-- akhir Voucher_Online -->
+
+</html>

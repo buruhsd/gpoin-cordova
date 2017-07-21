@@ -1,0 +1,247 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/onsenui.css"/>
+    <link rel="stylesheet" href="css/onsen-css-components.css"/>
+    <link rel="stylesheet" href="css/MyStyle.css"/>
+    <script src="js/onsenui.js"></script>
+    <script src="js/MyScript.js"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
+  </head>
+  <body>
+<!--     <ons-page id='mypage' id="App.html"> -->
+
+<!-- side menu -->
+<ons-splitter>
+  <ons-splitter-side id="menu" side="left" width="220px" collapse swipeable>
+    <ons-page>
+      <ons-list>
+        <ons-list-item onclick="fn.load('app_2.html')" tappable>
+          Edit Profil
+        </ons-list-item>
+        <ons-list-item onclick="fn.load('settings.html')" tappable>
+          Edit Trx Password
+        </ons-list-item>
+        <ons-list-item onclick="fn.load('')" tappable>
+          Customer Service
+        </ons-list-item>
+        <ons-list-item onclick="fn.load('')" tappable>
+          Log Out
+        </ons-list-item>
+      </ons-list>
+    </ons-page>
+  </ons-splitter-side>
+  <ons-splitter-content id="content" page="app_2.html"></ons-splitter-content>
+</ons-splitter>
+<!-- akhir side menu -->
+
+<!-- app_2 -->
+<ons-template id="app_2.html">
+  <ons-page>
+    
+    <!-- toolbar -->
+    <ons-toolbar style="background-color: white;">
+      <div class="left">
+        <ons-toolbar-button onclick="fn.open()">
+          <ons-icon icon="md-menu" style="color: black;" ></ons-icon> 
+          <!-- style="color: #FFFFFF;" -->
+        </ons-toolbar-button>
+      </div>
+      <div class="center" style="color: #FFFFFF;">
+        <img class="tengah" src="img/gpoin2u_logo.png" alt="" style="height: 45px; padding-top: 5px;" onclick="location.href='App.html';">
+      </div>
+      <div class="right" style="margin-right: 8px; color: #FFFFFF;">
+        <img src="img/JVLOGO.png" alt="" style="height: 50px; padding-top: 2px;">
+      </div>
+    </ons-toolbar>
+    <!-- akhir toolbar -->
+
+    <!-- content app_2 -->
+    <!-- profile -->
+    <ons-list>
+      <ons-row class ="profile">
+        <ons-col style="width: 20%">
+          <img src="img/QR_code.png" style="height: 100px;">
+        </ons-col>
+        <ons-col style="width: 10%; ">
+          <img src="img/drawable-hdpi/ps.png" style="height: 60px; margin-top: 20px;">
+        </ons-col>
+        <ons-col style="width: 70%; margin-top: 10px;">
+          <div class="name">
+            <b style="font-size: 20px">jv-io</b>
+          </div>
+          <div class="name">
+            <b style="font-size: 18px">ii</b>
+          </div>
+          <div class="name" style="font-size: 16px;">
+            <b style="color: #D94B5E;">164.30217733 Poin</b>
+          </div>              
+        </ons-col>
+      </ons-row>
+    </ons-list>
+    <!-- akhir profile -->
+
+    <!-- sub menu -->
+    <ons-list>
+
+      <ons-list-item modifier="chevron" class="list-item-container" style="max-height: 80px" onclick="fn.load('settings.html')">
+        <ons-row>
+          <ons-col width="20%" style="max-height: 50px; max-width: 50px">
+            <img src="img/icon/g_pay.png" style="height: 50px;">
+          </ons-col>
+          <ons-col>
+            <div class="name">
+              <b>G-J</b>
+              <b> PAY</b>
+            </div>
+            <div class="desc" style="font-size: 10px;">
+              Pembayaran PPOB (Pulsa, Listrik dan PDAM)
+            </div>
+          </ons-col>
+        </ons-row>
+      </ons-list-item>
+
+      <ons-list-item modifier="chevron" class="list-item-container" style="max-height: 80px" onclick="fn.load('settings.html')">
+        <ons-row>
+          <ons-col width="20%">
+            <img src="img/icon/g_multi.png" style="height: 50px;">
+          </ons-col>
+          <ons-col>
+            <div class="name">
+              <b>G-J</b>
+              <b> MULTI FINANCE</b>
+            </div>
+            <div class="desc" style="font-size: 10px;">
+              Pembayaran Cicilan / Angsuran / Biaya Bulanan
+            </div>
+          </ons-col>
+        </ons-row>
+      </ons-list-item>
+
+      <ons-list-item modifier="chevron" class="list-item-container" style="max-height: 80px" onclick="location.href='forget_pass.html';">
+        <ons-row>
+          <ons-col width="20%">
+            <img src="img/icon/game_voucher.png" style="height: 50px;">
+          </ons-col>
+          <ons-col>
+            <div class="name">
+              <b>G-J</b>
+              <b> VOUCHER GAME</b>
+            </div>
+            <div class="desc" style="font-size: 10px;">
+              Pembayaran Voucher Game
+            </div>
+          </ons-col>
+        </ons-row>
+      </ons-list-item>
+
+      <ons-list-item modifier="chevron" class="list-item-container" style="max-height: 80px">
+        <ons-row>
+          <ons-col width="20%">
+            <img src="img/icon/ticket.png" style="height: 50px;">
+          </ons-col>
+          <ons-col>
+            <div class="name">
+              <b>G-J</b>
+              <b> TICKETING</b>
+            </div>
+            <div class="desc" style="font-size: 10px;">
+              Pembelian Tiket Pesawat
+            </div>
+          </ons-col>
+        </ons-row>
+      </ons-list-item>
+
+      <ons-list-item modifier="chevron" class="list-item-container" style="max-height: 80px">
+        <ons-row>
+          <ons-col width="20%">
+            <img src="img/icon/g_voucher.png" style="height: 50px;">
+          </ons-col>
+          <ons-col>
+            <div class="name">
+              <b>G-J</b>
+              <b> HOTEL</b>
+            </div>
+            <div class="desc" style="font-size: 10px;">
+              Pemesanan Hotel
+            </div>
+          </ons-col>
+        </ons-row>
+      </ons-list-item>
+
+      <ons-list-item modifier="chevron" class="list-item-container" style="max-height: 80px">
+        <ons-row>
+          <ons-col width="20%">
+            <img src="img/icon/g_voucher.png" style="height: 50px;">
+          </ons-col>
+          <ons-col>
+            <div class="name">
+              <b>G-J</b>
+              <b> VOUCHER</b>
+            </div>
+            <div class="desc" style="font-size: 10px;">
+              Pembelian Voucher Belanja
+            </div>
+          </ons-col>
+        </ons-row>
+      </ons-list-item>
+
+      <ons-list-item modifier="chevron" class="list-item-container" style="max-height: 80px">
+        <ons-row>
+          <ons-col width="20%">
+            <img src="img/icon/g_deposit.png" style="height: 50px;">
+          </ons-col>
+          <ons-col>
+            <div class="name">
+              <b>G-J</b>
+              <b> DEPOSIT / TRANSFER</b>
+            </div>
+            <div class="desc" style="font-size: 10px;">
+              Deposit GPOIN atau Transfer GPOIN, Mutasi
+            </div>
+          </ons-col>
+        </ons-row>
+      </ons-list-item>
+
+      <ons-list-item modifier="chevron" class="list-item-container" style="max-height: 80px">
+        <ons-row>
+          <ons-col width="20%">
+            <img src="img/icon/inbox.png" style="height: 40px;">
+          </ons-col>
+          <ons-col>
+            <div class="name">
+              <b>G-J</b>
+              <b> INBOX</b>
+            </div>
+            <div class="desc" style="font-size: 10px;">
+              History Pembelian / Pembayaran
+            </div>
+          </ons-col>
+        </ons-row>
+      </ons-list-item>
+
+    </ons-list>
+    <!-- akhir sub menu -->
+    <!-- akhir content app_2 -->
+  </ons-page>
+</ons-template>
+<!-- akhir app_2 -->
+
+<script>
+  window.fn = {};
+  // script load swipe
+  window.fn.open = function() {
+    var menu = document.getElementById('menu');
+    menu.open();
+  };
+  // script load page
+  window.fn.load = function(page) {
+    var content = document.getElementById('content');
+    var menu = document.getElementById('menu');
+    content.load(page)
+      .then(menu.close.bind(menu));
+  };
+</script>
+
+</html>
