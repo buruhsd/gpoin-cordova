@@ -3,6 +3,9 @@ app.controller('MainController', function($scope, $http){
 	$scope.username="";
 	$scope.pass="";
 	$scope.inputcaptcha="";
+	$scope.data="";
+	$scope.email="";
+
 
 
 		var a = Math.floor(100000 + Math.random() * 900000);   
@@ -47,12 +50,20 @@ app.controller('MainController', function($scope, $http){
 				    .then(function successCallback(response) {
 					    console.log(response.data);
 
-						var json = JSON.stringify(response.data);
+						var json = response.data;
 
+						var json = json[0];
+
+						// var json = json.toString();
+
+						console.log(json.username);
+
+						$scope.data = json;
 						// console.log(json);
 					    if (json != "false") {
-					    	console.log(json);
-					    	window.location.href = 'app.html'+$scope.username;
+					    	// $_SESSION['test'] = json_encode($response.data);
+					    	// window.location.href = '#!/red';
+					    	window.location.href = 'app.html';
 					    }else{
 					    	window.alert("hahahah");
 					    }
@@ -65,6 +76,7 @@ app.controller('MainController', function($scope, $http){
 					  });
 				}else{
 					window.alert("captcha salah");	
+					$scope.log();
 				}
 				
 			}else{
@@ -73,7 +85,32 @@ app.controller('MainController', function($scope, $http){
 			}
 			
 		}
-		
+
+		$scope.forget=function(index){
+			$http.post("http://112.78.37.121/apig/gmember_phonegap/controller_membernya/forgot_pass",{'username':$scope.username, 'email':$scope.email})
+				    .then(function successCallback(response) {
+					    console.log(response.data);
+
+						var json = response.data;
+
+						var json = json;
+
+						// var json = json.toString();
+
+						console.log(json.username);
+
+						$scope.data = json;
+						// console.log(json);
+					    window.alert($scope.data.id);
+					    
+				        
+					  }, function errorCallback(response) {
+					    // called asynchronously if an error occurs
+					    // or server returns response with an error status
+					    window.alert("cek koneksi");
+					  });
+		}
+
 
 		
 });

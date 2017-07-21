@@ -1,0 +1,58 @@
+ <!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/onsenui.css"/>
+    <link rel="stylesheet" href="css/onsen-css-components.css"/>
+    <link rel="stylesheet" href="css/MyStyle.css"/>
+    <script src="js/onsenui.js"></script>
+    <script src="js/MyScript.js"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
+  </head>
+  <body ng-app="FirstApp">
+  <div ng-controller="MainController">
+    <ons-page id='mypage' id="forget_pass.html">
+      <div class="formarea">
+        <!-- logo -->
+        <div class="logo">
+          <img class="logo_login tengah" src="img/gpoin2u_logo.png"> 
+        </div>
+        <!-- akhir logo -->
+        <!-- data input -->
+        <div class="form-row">
+          <ons-select id="choose-sel" class="select-input--underbar width-full">
+            <option value="Merchant">Merchant</option>
+            <option value="Member">Member</option>
+          </ons-select>
+        </div>
+        <div class="form-row">
+          <input type="Username" class="text-input--underbar width-full" placeholder="Username" value="" ng-model="username">
+        </div>
+        <div class="form-row">
+          <input type="Email" class="text-input--underbar width-full" placeholder="Email" value="" ng-model="email">
+        </div>
+        <!-- akhir data input -->
+        <!-- button -->
+        <div class="vspc form-row"> 
+          <ons-button modifier="large--cta" style="margin: 0 auto; background-color: #D94B5E; color: #FFFFFF;"  ng-click="forget()">
+            SEND
+          </ons-button>
+            <div class="note lucent" width='100%'; style="text-align: center; line-height: 31px;">
+              <a href="login.html">
+                Back to Log In
+              </a>
+            </div>
+        </div>
+        <!-- akhir button -->
+      </div>
+    </ons-page>
+    </div>
+    <script src="js/angular/angular.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controllers/MainController.js"></script>
+    <script src="js/directives/MyDirective.js"></script>
+    <script src="js/md5.js"></script>
+    <script src="js/demo/demo.js"></script>    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+    </body>
+</html>
