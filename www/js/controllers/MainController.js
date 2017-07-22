@@ -112,5 +112,30 @@ app.controller('MainController', function($scope, $http){
 		}
 
 
+		$scope.signup=function(index){
+			$http.post("http://112.78.37.121/apig/gmember_phonegap/controller_membernya/forgot_pass",{'username':$scope.username, 'email':$scope.email})
+				    .then(function successCallback(response) {
+					    console.log(response.data);
+
+						var json = response.data;
+
+						var json = json;
+
+						// var json = json.toString();
+
+						console.log(json.username);
+
+						$scope.data = json;
+						// console.log(json);
+					    window.alert($scope.data.id);
+					    
+				        
+					  }, function errorCallback(response) {
+					    // called asynchronously if an error occurs
+					    // or server returns response with an error status
+					    window.alert("cek koneksi");
+					  });
+		
+
 		
 });
