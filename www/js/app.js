@@ -1,4 +1,4 @@
-var app=angular.module('FirstApp',["ngRoute"]);
+var app=angular.module('FirstApp',["ngRoute", "ngStorage"]);
 
 app.filter('rupiah',	function(){
 	return	function	toRp(angka){
