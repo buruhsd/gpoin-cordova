@@ -1,4 +1,4 @@
-<!-- <!doctype html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -10,8 +10,8 @@
     <script src="js/jquery-3.2.1.min.js"></script>
   </head>
   <body ng-app="FirstApp">
-  <div> -->
 <!--     <ons-page id='mypage' id="App.html"> -->
+
 
 <!-- side menu -->
 <ons-splitter>
@@ -38,7 +38,8 @@
 <!-- akhir side menu -->
 
 <!-- home -->
-<ons-template id="home.html">
+<div id="home.html" ng-controller="AppController">
+
   <ons-page>
     
     <!-- toolbar -->
@@ -69,14 +70,14 @@
           <img src="img/drawable-hdpi/ps.png" style="height: 60px; margin-top: 20px;">
         </ons-col>
         <ons-col style="width: 70%; margin-top: 10px;">
-          <div class="name" >
-            <b style="font-size: 20px" ng-model="loged">hhh</b>
-          </div>
           <div class="name">
-            <b style="font-size: 18px">ii</b>
+            <b ng-bind="name" style="font-size: 20px">{{name}}</b>
           </div>
+          <!-- <div class="name">
+            <b style="font-size: 18px">ii</b>
+          </div> -->
           <div class="name" style="font-size: 16px;">
-            <b style="color: #D94B5E;">164.30217733 Poin</b>
+            <b style="color: #D94B5E;">{{deposite}} poin</b>
           </div>              
         </ons-col>
       </ons-row>
@@ -203,9 +204,8 @@
     <!-- akhir sub menu -->
     <!-- akhir content home -->
   </ons-page>
-</ons-template>
+</div>
 <!-- akhir home -->
-
 <script>
   window.fn = {};
   // script load swipe
@@ -221,13 +221,17 @@
       .then(menu.close.bind(menu));
   };
 </script>
-<!-- <script src="js/angular/angular.js"></script>
+
+<script src="js/angular/angular.js"></script>
 <script src="js/app.js"></script>
-<script src="js/controllers/MainController.js"></script>
+<script src="js/controllers/AppController.js"></script>
 <script src="js/directives/MyDirective.js"></script>
-<script src="js/md5.js"></script>
-<script src="js/demo/demo.js"></script>    
+<!-- <script src="js/md5.js"></script>
+<script src="js/demo/demo.js"></script> -->
+<script src="js/factory/SessionFactory.js"></script>    
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
-</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.10/ngStorage.min.js"></script>
+
 </body>
-</html> -->
+
+</html>

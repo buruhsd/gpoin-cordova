@@ -68,16 +68,16 @@ app.controller('MainController', function($scope, $http, $sessionStorage){
 
 							var json = json[0];
 
-							console.log(json.username);
+							console.log(json);
 
-					    	// window.location.href = 'app.html';
-
+					    	window.location.href = 'app.html';
+					    	localStorage.setItem('id', json.id);
+					    	localStorage.setItem('id_user', json.id_user);
 					    	localStorage.setItem('name', json.username);
-							// sessionStorage.setItem('loggedin_id', $scope.user_details.u_id );
-							// sessionStorage.setItem('loggedin_phone', $scope.user_details.u_phone);
-							// sessionStorage.setItem('loggedin_address', $scope.user_details.u_address);
-							// sessionStorage.setItem('loggedin_pincode', $scope.user_details.u_pincode);\\
-							window.location.href = '#!/red';
+					    	localStorage.setItem('email', json.email);
+					    	localStorage.setItem('deposite', json.deposit);
+							
+							// window.location.href = '#!/red';
 
 							console.log(localStorage);
 					    }else{
