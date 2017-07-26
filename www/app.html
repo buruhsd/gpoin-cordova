@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html ng-app="FirstApp">
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/onsenui.css"/>
@@ -9,7 +9,7 @@
     <script src="js/MyScript.js"></script>
     <script src="js/jquery-3.2.1.min.js"></script>
   </head>
-  <body ng-app="FirstApp">
+  <body ng-controller="AppController">
 <!--     <ons-page id='mypage' id="App.html"> -->
 
 
@@ -19,7 +19,7 @@
     <ons-page>
       <ons-list>
         <ons-list-item onclick="fn.load('home.html')" tappable>
-          Edit Profil
+          {{name}}
         </ons-list-item>
         <ons-list-item onclick="fn.load('settings.html')" tappable>
           Edit Trx Password
@@ -38,7 +38,7 @@
 <!-- akhir side menu -->
 
 <!-- home -->
-<div id="home.html" ng-controller="AppController">
+<ons-template id="home.html">
 
   <ons-page>
     
@@ -71,12 +71,12 @@
         </ons-col>
         <ons-col style="width: 70%; margin-top: 10px;">
           <div class="name">
-            <b ng-bind="name" style="font-size: 20px">{{name}}</b>
+            <b ng-bind="name" id="1" style="font-size: 20px">{{name}}</b>
           </div>
           <!-- <div class="name">
             <b style="font-size: 18px">ii</b>
           </div> -->
-          <div class="name" style="font-size: 16px;">
+          <div class="name" id="2" style="font-size: 16px;">
             <b style="color: #D94B5E;">{{deposite}} poin</b>
           </div>              
         </ons-col>
@@ -204,7 +204,8 @@
     <!-- akhir sub menu -->
     <!-- akhir content home -->
   </ons-page>
-</div>
+
+</ons-template>
 <!-- akhir home -->
 <script>
   window.fn = {};

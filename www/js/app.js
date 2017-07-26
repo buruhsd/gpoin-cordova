@@ -18,7 +18,7 @@ app.filter('rupiah',	function(){
 app.config(function($routeProvider) {
     $routeProvider
     .when("/", {
-        templateUrl : "index.html"
+        templateUrl : "index1.html"
     })
     .when("/red", {
         templateUrl : "app.html"
